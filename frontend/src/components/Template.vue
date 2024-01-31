@@ -1,9 +1,4 @@
-<template>
-    <div>
-        <!-- HTML HERE -->    
-        <h2>New Template</h2>
-    </div>
-</template>
+<template></template>
 
 <script setup>
 /** JAVASCRIPT HERE */

@@ -1,7 +1,6 @@
 import {defineStore} from 'pinia'
 import {ref} from 'vue'
 
-
 export const useMqttStore =  defineStore('mqtt', ()=>{
 
     /*  
@@ -16,9 +15,9 @@ export const useMqttStore =  defineStore('mqtt', ()=>{
 
     // STATES 
     const mqtt              = ref(null);
-    const host              = ref("localhost");  // Host Name or IP address
+    const host              = ref("www.yanacreations.com");  // Host Name or IP address
     const port              = ref(9002);  // Port number
-    const payload           = ref({"id":620012345,"timestamp": 1702566538,"number":0,"ledA":0,"ledB":0}); // Set initial values for payload
+    const payload           = ref({"id":620152241,"timestamp": 1702566538,"number":0,"ledA":0,"ledB":0}); // Set initial values for payload
     const payloadTopic      = ref("");
     const subTopics         = ref({});
  
@@ -54,7 +53,7 @@ export const useMqttStore =  defineStore('mqtt', ()=>{
             console.log(`MQTT: Connection lost - ${response.errorMessage}`);
         }
         }
-  
+
     const onFailure = (response) => {
         // called when the connect request has failed or timed out.
         const host = response.invocationContext.host;   
